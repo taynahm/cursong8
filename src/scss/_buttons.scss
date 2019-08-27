@@ -1,0 +1,23 @@
+.btn-outline-success {
+    @extend .btn-outline-success;
+    border-color: $default_green;
+    color: $default_gray;
+
+    &:hover {
+        background-color: $default_green;
+        border-color: $default_green;
+        color: $default_gray;
+    }
+}
+
+.btn-success {
+  @extend .btn-success;
+  background-color: $default_green;
+  border-color: $default_green;
+  color: white;
+
+  &:hover {
+    border-color: $default_green;
+    background-color: lighten($default_green, 10) !important;
+  }
+}

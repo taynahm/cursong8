@@ -1,0 +1,18 @@
+@import '../../../../scss/theme';
+
+.app-rodape-container {
+  font-size: #{$footer_font_size}px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  // TODO
+}

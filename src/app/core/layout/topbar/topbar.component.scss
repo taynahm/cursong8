@@ -1,0 +1,82 @@
+@import '../../../../scss/theme';
+
+.app-header-container {
+    height: #{$header_height}px;
+    background-color: $header_bg_color;
+    color: $header_font_color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+  
+    .brand {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+  
+      .menu-toggle {
+          display: none;
+      }
+    }
+  
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  
+      div {
+          padding-left: 20px;
+          padding-right: 20px;
+  
+          &:last-child {
+              padding-right: 0px;
+          }
+      }
+  
+      .username {
+          border-right: 1px solid $header_separator_color;
+      }
+  
+      .notifications, .options {
+          cursor: pointer;
+          button {
+              margin: 0px;
+              padding: 0px;
+              background-color: transparent;
+              border: none;
+              color: white;
+          }
+      }
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .app-header-container {
+      padding-left: 20px;
+      padding-right: 20px;
+  
+      .brand {
+          width: 100%;
+  
+          .menu-toggle {
+              display: inline;
+              background-color: transparent;
+              border: none;
+              color: $header_font_color;
+              font-size: #{$header_menu_icon_size}px;
+          }
+  
+          .img-container {
+              display: flex;
+              justify-content: center;
+              width: 100%;
+          }
+      }
+  
+      .actions {
+          display: none;
+      }
+    }
+  }

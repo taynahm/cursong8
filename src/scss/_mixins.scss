@@ -1,0 +1,26 @@
+@mixin default-box {
+    background-color: white;
+    box-shadow: 0 4px 9px 0 rgba(235,235,235,0.5);
+}
+
+@mixin list-layout {
+    font-size: 12px;	
+    letter-spacing: 0.5px;	
+    line-height: 15px;
+
+    .help-data {
+        width: 65px;
+        margin-right: 10px;
+    }
+    .help-setor {
+        width: 35px;
+        margin-right: 10px;
+    }
+    .help-prioridade {
+        width: 100%;
+        margin-right: 10px;
+    }
+    .help-icon {
+        width: 10px;
+    }
+}

@@ -1,0 +1,17 @@
+.clickable {
+  cursor: pointer;
+}
+
+.card {
+    @include default-box;
+    border: none;
+    border-radius: 0px;
+}
+
+h2 {
+  color: $default_gray;
+  font-size: 18px;
+  letter-spacing: 0.76px;
+  line-height: 23px;
+}
+

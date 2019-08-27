@@ -1,0 +1,75 @@
+@import '../../../../scss/theme';
+
+.all-black {
+  display: none;
+}
+.app-menu-container {
+  border: 1px solid transparent;
+  height: calc(100vh - #{$header_height}px);
+  width: #{$aside_width}px;
+  background-color: $aside_bg_color;
+  color: $header_bg_color;
+  font-size: #{$aside_font_size}px;
+  box-shadow: 0 7px 20px 0 rgba(224, 224, 224, 0.5);
+
+  nav {
+    margin-top: 40px;
+
+    ul {
+        li {
+            height: 25px;
+            padding-left: 25px;
+            margin-bottom: 40px;
+
+            a {
+                font-size: #{$aside_font_size}px;
+                color: $default_font_color;
+                line-height: 23px;
+                letter-spacing: 0.76px;
+                text-decoration: none;
+
+                .fas {
+                }
+
+                .texto {
+                  padding-left: 24px;
+                }
+            }
+
+            a.disabled {
+              margin-left: -10px;
+            }
+        }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .app-menu-container {
+    display: none;
+  }
+  .app-menu-container.active {
+    display: flex;
+    position: fixed;
+    z-index: 3;
+    top: 0px;
+    height: 100%;
+
+    nav > ul > li > a {
+      font-size: #{$aside_mobile_font_size}px;
+      letter-spacing: 0.5px;
+      line-height: 15px;
+    }
+  }
+
+  .all-black.active {
+    display: flex;
+    position: fixed;
+    background-color: rgba(0,0,0,0.84);
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    top: 0px;
+  }
+}
